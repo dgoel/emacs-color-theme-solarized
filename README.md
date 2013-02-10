@@ -1,3 +1,5 @@
+**Disclaimer**: This repository was forked from [sellout](https://github.com/sellout/emacs-color-theme-solarized)
+
 Solarized Colorscheme for Emacs
 ===============================
 
