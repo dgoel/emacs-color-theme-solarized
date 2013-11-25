@@ -314,7 +314,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
              (info-xref-visited ((t (,@fg-magenta :inherit info-xref))))
              ;; org
              (org-hide ((t (,@fg-base03))))
-             (org-todo ((t (,@fmt-bold ,@fg-base03 ,@bg-red))))
+             (org-todo ((t (,@fmt-bold ,@fg-red))))
              (org-done ((t (,@fmt-bold ,@fg-green))))
              (org-todo-kwd-face ((t (,@fg-red ,@bg-base03))))
              (org-done-kwd-face ((t (,@fg-green ,@bg-base03))))
