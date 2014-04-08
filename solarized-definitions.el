@@ -286,14 +286,14 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
              (eshell-ls-unreadable ((t (,@fg-base00))))
              (eshell-prompt ((t (,@fmt-bold ,@fg-green))))
              ;; font-lock
-             (font-lock-builtin-face ((t (,@fmt-none ,@fg-green)))) ; Statement
+             (font-lock-builtin-face ((t (,@fmt-none ,@fg-magenta)))) ; Statement
              (font-lock-comment-face ((t (,@fmt-ital ,@fg-base01)))) ; Comment
              (font-lock-constant-face ((t (,@fmt-none ,@fg-cyan)))) ; Constant
              (font-lock-function-name-face ; Identifier
               ((t (,@fmt-none ,@fg-blue))))
-             (font-lock-keyword-face ((t (,@fmt-none ,@fg-green)))) ; Statement
+             (font-lock-keyword-face ((t (,@fmt-none ,@fg-magenta)))) ; Statement
              (font-lock-string-face ((t (,@fmt-none ,@fg-cyan)))) ; Constant
-             (font-lock-type-face ((t (,@fmt-none ,@fg-yellow)))) ; Type
+             (font-lock-type-face ((t (,@fmt-none ,@fg-green)))) ; Type
              (font-lock-variable-name-face ; Identifier
               ((t (,@fmt-none ,@fg-blue))))
              (font-lock-warning-face ((t (,@fmt-bold ,@fg-red)))) ; Error
@@ -321,9 +321,9 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
              (info-xref-visited ((t (,@fg-magenta :inherit info-xref))))
              ;; org
              (org-hide ((t (,@fg-base03))))
-             (org-todo ((t (,@fmt-bold ,@fg-red))))
+             (org-todo ((t (,@fmt-bold ,@fg-magenta))))
              (org-done ((t (,@fmt-bold ,@fg-green))))
-             (org-todo-kwd-face ((t (,@fg-red ,@bg-base03))))
+             (org-todo-kwd-face ((t (,@fg-magenta ,@bg-base03))))
              (org-done-kwd-face ((t (,@fg-green ,@bg-base03))))
              (org-project-kwd-face ((t (,@fg-violet ,@bg-base03))))
              (org-waiting-kwd-face ((t (,@fg-orange ,@bg-base03))))
