@@ -1,6 +1,3 @@
-(eval-when-compile
-  (require 'cl))
-
 (defconst solarized-description
   "Color theme by Ethan Schoonover, created 2011-03-24.
 Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized.")
@@ -397,6 +394,9 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (widget-single-line-field (:inherit widget-field))
                 ;; extra modules
                 ;; -------------
+                ;; ace-jump-mode
+                (ace-jump-face-background (,@fmt-none ,@fg-base01))
+                (ace-jump-face-foreground (,@fmt-bold ,@fg-red))
                 ;; bm visual bookmarks
                 (bm-fringe-face (,@bg-orange ,@fg-base03))
                 (bm-fringe-persistent-face (,@bg-blue ,@fg-base03))
@@ -420,7 +420,8 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (jabber-roster-user-away (,@fmt-ital ,@fg-green))
                 (jabber-roster-user-chatty (,@fmt-bold ,@fg-orange))
                 (jabber-roster-user-dnd (,@fmt-ital ,@fg-red))
-                (jabber-roster-user-error (:weight light :slant italic ,@fg-red))
+                (jabber-roster-user-error
+                 (:weight light :slant italic ,@fg-red))
                 (jabber-roster-user-offline (,@fg-base01))
                 (jabber-roster-user-online (,@fmt-bold ,@fg-blue))
                 (jabber-roster-user-xa (,@fmt-ital ,@fg-magenta))
