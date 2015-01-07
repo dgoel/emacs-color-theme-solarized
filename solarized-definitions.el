@@ -319,14 +319,14 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (eshell-ls-unreadable (,@fg-base00))
                 (eshell-prompt (,@fmt-bold ,@fg-green))
                 ;; font-lock
-                (font-lock-builtin-face (,@fmt-none ,@fg-green)) ; Statement
+                (font-lock-builtin-face (,@fmt-none ,@fg-magenta)) ; Statement
                 (font-lock-comment-face (,@fmt-ital ,@fg-base01)) ; Comment
                 (font-lock-constant-face (,@fmt-none ,@fg-cyan)) ; Constant
                 (font-lock-function-name-face ; Identifier
                  (,@fmt-none ,@fg-blue))
-                (font-lock-keyword-face (,@fmt-none ,@fg-green)) ; Statement
+                (font-lock-keyword-face (,@fmt-none ,@fg-magenta)) ; Statement
                 (font-lock-string-face (,@fmt-none ,@fg-cyan)) ; Constant
-                (font-lock-type-face (,@fmt-none ,@fg-yellow)) ; Type
+                (font-lock-type-face (,@fmt-none ,@fg-green)) ; Type
                 (font-lock-variable-name-face ; Identifier
                  (,@fmt-none ,@fg-blue))
                 (font-lock-warning-face (,@fmt-bold ,@fg-red)) ; Error
@@ -351,9 +351,9 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 ;; org
                 (org-block-background (,@bg-base02))
                 (org-hide (,@fg-base03))
-                (org-todo (,@fmt-bold ,@fg-base03 ,@bg-red))
+                (org-todo (,@fmt-bold ,@fg-magenta))
                 (org-done (,@fmt-bold ,@fg-green))
-                (org-todo-kwd-face (,@fg-red ,@bg-base03))
+                (org-todo-kwd-face (,@fg-magenta ,@bg-base03))
                 (org-done-kwd-face (,@fg-green ,@bg-base03))
                 (org-project-kwd-face (,@fg-violet ,@bg-base03))
                 (org-waiting-kwd-face (,@fg-orange ,@bg-base03))
