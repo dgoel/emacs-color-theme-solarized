@@ -1,8 +1,7 @@
 (eval-when-compile
   (unless (require 'cl-lib nil t)
     (require 'cl)
-    (defalias 'cl-case 'case)
-    (defalias 'cl-copy-list 'copy-list))
+    (defalias 'cl-case 'case))
   )
 
 (defconst solarized-description
@@ -93,7 +92,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
 (defun solarized-face-for-index (facespec index &optional light)
   "Creates a face from facespec where the colors use the names from
   `solarized-colors`."
-  (let ((new-fontspec (cl-copy-list facespec)))
+  (let ((new-fontspec (copy-sequence facespec)))
     (dolist (property '(:foreground :background :color))
       (let ((color-name (plist-get new-fontspec property)))
         (when color-name
@@ -681,6 +680,11 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (rainbow-delimiters-depth-7-face (:inherit outline-7))
                 (rainbow-delimiters-depth-8-face (:inherit outline-8))
                 (rainbow-delimiters-depth-9-face (,@fg-green))
+                ;; powerline
+                (powerline-active1 (,@fg-base00 :inherit mode-line))
+                (powerline-active2 (,@fg-base0 :inherit mode-line))
+                (powerline-inactive1 (,@fg-base02 ,@bg-base1 :inherit mode-line-inactive))
+                (powerline-inactive2 (,@fg-base01 :inherit mode-line-inactive))
                 ;; slime
                 (slime-error-face (,@fmt-revr ,@fg-red)) ; ErrorMsg
                 (slime-note-face (,@fg-yellow))
@@ -746,7 +750,17 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (company-scrollbar-bg (,@bg-base02))
                 (company-preview (,@bg-green))
                 (company-preview-common (,@bg-base02))
-                (company-template-field (,@fg-base03 ,@bg-yellow)))))))
+                (company-template-field (,@fg-base03 ,@bg-yellow))
+                ;; hydra
+                (hydra-face-red (,@fmt-bold ,@fg-red))
+                (hydra-face-blue (,@fmt-bold ,@fg-blue))
+                (hydra-face-amaranth (,@fmt-bold ,@fg-orange))
+                (hydra-face-pink (,@fmt-bold ,@fg-magenta))
+                (hydra-face-teal (,@fmt-bold ,@fg-cyan))
+                ;; guide-key
+                (guide-key/prefix-command-face (,@fg-blue))
+                (guide-key/highlight-command-face (,@fg-orange))
+                (guide-key/key-face (,@fg-green)))))))
 
 ;;;###autoload
 (when (boundp 'custom-theme-load-path)
