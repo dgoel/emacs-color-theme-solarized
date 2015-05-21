@@ -775,3 +775,10 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
      (provide-theme ',name)))
 
 (provide 'solarized-definitions)
+
+;; Local Variables:
+;; no-byte-compile: t
+;; eval: (when (fboundp 'rainbow-mode) (rainbow-mode 1))
+;; eval: (when (fboundp 'aggressive-indent-mode) (aggressive-indent-mode -1))
+;; fill-column: 95
+;; End:
