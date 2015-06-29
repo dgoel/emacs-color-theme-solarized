@@ -744,10 +744,10 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (term-color-white (,@fg-base00))
                 ;; company
                 (company-tooltip (,@fg-base00 ,@bg-base02))
-                (company-tooltip-selection (,@fg-base1 ,@bg-base02))
+                (company-tooltip-selection (,@fg-green ,@bg-base02))
                 (company-tooltip-mouse (,@fg-base1 ,@bg-base02))
-                (company-tooltip-common (,@fg-blue ,@bg-base02))
-                (company-tooltip-common-selection (,@fg-blue ,@bg-base01))
+                (company-tooltip-common (,@fg-blue ,@bg-base02 ,@fmt-undr))
+                (company-tooltip-common-selection (,@fg-green ,@bg-base02 ,@fmt-undr))
                 (company-tooltip-annotation (,@fg-yellow ,@bg-base02))
                 (company-scrollbar-fg (,@bg-base0))
                 (company-scrollbar-bg (,@bg-base02))
@@ -774,7 +774,13 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (magit-log-head-label-local (,@fg-yellow))
                 (magit-log-head-label-head (,@fg-violet))
                 (magit-process-ok (,@fg-green :inherit magit-section-title))
-                (magit-process-ng (,@fg-red :inherit magit-section-title)))))))
+                (magit-process-ng (,@fg-red :inherit magit-section-title))
+                ;; undo-tree
+                (undo-tree-visualizer-current-face (,@fg-orange))
+                (undo-tree-visualizer-default-face (:inherit shadow))
+                (undo-tree-visualizer-active-branch-face (:inherit default))
+                (undo-tree-visualizer-unmodified-face (,@fg-cyan))
+                (undo-tree-visualizer-register-face (,@fg-yellow)))))))
 
 ;;;###autoload
 (when (boundp 'custom-theme-load-path)

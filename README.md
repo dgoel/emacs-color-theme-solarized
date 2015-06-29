@@ -1,5 +1,6 @@
 **Disclaimer**: This repository was forked from [sellout](https://github.com/sellout/emacs-color-theme-solarized)
 
+[![Stories in Ready](https://badge.waffle.io/sellout/emacs-color-theme-solarized.png?label=ready&title=Ready)](https://waffle.io/sellout/emacs-color-theme-solarized)
 Solarized Colorscheme for Emacs
 ===============================
 
