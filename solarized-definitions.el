@@ -240,9 +240,9 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (shadow (,@fg-base01))
                 (link (,@fmt-undr ,@fg-violet))    ; Underlined
                 (link-visited (,@fmt-undr ,@fg-magenta))
-                (match (,@fmt-revr ,@fg-yellow))   ; Search
-                (error (,@fmt-revr ,@fg-red))      ; ErrorMsg
-                (warning (,@fmt-bold ,@fg-red))    ; WarningMsg
+                (match (,@fmt-stnd ,@fg-yellow ,@bg-back))   ; Search
+                (error (,@fmt-none ,@fg-red))      ; ErrorMsg
+                (warning (,@fmt-none ,@fg-red))    ; WarningMsg
                 (success (,@fg-blue))              ; MoreMsg
                 (escape-glyph-face (,@fg-red))
                 (fringe (,@fg-base01 ,@bg-base02))
@@ -267,8 +267,8 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 ;; comint
                 (comint-highlight-prompt (,@fg-blue))
                 ;; compilation
-                (compilation-info (,@fmt-bold ,@fg-green))
-                (compilation-warning (,@fmt-bold ,@fg-orange))
+                (compilation-info (,@fmt-none ,@fg-green))
+                (compilation-warning (,@fmt-none ,@fg-orange))
                 ;; custom
                 (custom-button
                  (,@fg-base1 ,@bg-base02 :box (:line-width 2 :style released-button)))
@@ -348,7 +348,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (font-lock-type-face (,@fmt-none ,@fg-green)) ; Type
                 (font-lock-variable-name-face ; Identifier
                  (,@fmt-none ,@fg-blue))
-                (font-lock-warning-face (,@fmt-bold ,@fg-red)) ; Error
+                (font-lock-warning-face (,@fmt-none ,@fg-red)) ; Error
                 (font-lock-doc-face (,@fmt-ital ,@fg-base01)) ; Comment
                 (font-lock-doc-string-face ; Comment (XEmacs-only)
                  (,@fmt-ital ,@fg-base01))
@@ -396,7 +396,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (org-drawer (,@fmt-bold ,@fg-blue))
                 (org-column (,@fmt-revr ,@fg-cyan))
                 (org-column-title (,@fmt-bold ,@fmt-revr))
-                (org-warning (,@fmt-bold ,@fg-red))
+                (org-warning (,@fmt-none ,@fg-red))
                 (org-archived (,@fg-base01))
                 (org-link (,@fmt-undr ,@fg-violet))
                 (org-footnote (,@fmt-undr ,@fg-violet))
