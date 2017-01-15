@@ -205,14 +205,6 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
           (fg-blue '(:foreground blue))
           (fg-cyan '(:foreground cyan))
 
-          ;; (fmt-none `(:weight normal :slant normal  :underline nil        :inverse-video nil))
-          ;; (fmt-bold `(:weight ,bold  :slant normal  :underline nil        :inverse-video nil))
-          ;; (fmt-bldi `(:weight ,bold                 :underline nil        :inverse-video nil))
-          ;; (fmt-undr `(:weight normal :slant normal  :underline ,underline :inverse-video nil))
-          ;; (fmt-undb `(:weight ,bold  :slant normal  :underline ,underline :inverse-video nil))
-          ;; (fmt-undi `(:weight normal                :underline ,underline :inverse-video nil))
-          ;; (fmt-uopt `(:weight normal :slant normal  :underline ,opt-under :inverse-video nil))
-
           (fmt-none   `())
           (fmt-bold   `(:weight ,bold))
           (fmt-bldi   `(:weight ,bold :slant ,italic))
@@ -220,7 +212,6 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
           (fmt-undb   `(:weight ,bold                :underline ,underline))
           (fmt-undi   `(              :slant ,italic :underline ,underline))
           (fmt-uopt   `(                             :underline ,opt-under))
-
           ;; FIXME: don’t hardcode the SRGB color names
           (fmt-curl-red    `(                        :underline (:color "#dc322f" :style wave)))
           (fmt-curl-yellow `(                        :underline (:color "#b58900" :style wave)))
@@ -242,8 +233,8 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (shadow (,@fg-base01))
                 (link (,@fmt-undr ,@fg-violet))    ; Underlined
                 (link-visited (,@fmt-undr ,@fg-magenta))
-                (match (,@fmt-stnd ,@fg-yellow ,@bg-back))   ; Search
-                (error (,@fmt-none ,@fg-red))      ; ErrorMsg
+                (match (,@fmt-revr ,@fg-yellow ,@bg-back))   ; Search
+                (error (,@fmt-revr ,@fg-red))      ; ErrorMsg
                 (warning (,@fmt-none ,@fg-red))    ; WarningMsg
                 (success (,@fg-blue))              ; MoreMsg
                 (escape-glyph-face (,@fg-red))
@@ -374,11 +365,8 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (org-hide (,@fg-base03))
                 (org-todo (,@fmt-bold ,@fg-magenta))
                 (org-done (,@fmt-bold ,@fg-green))
-                ;; (org-todo-kwd-face (,@fg-magenta ,@bg-base03))
-                ;; (org-done-kwd-face (,@fg-green ,@bg-base03))
                 (org-todo-kwd-face (,@fmt-bold ,@fg-base03 ,@bg-red))
                 (org-done-kwd-face (,@fmt-bold ,@fg-green))
-
                 (org-project-kwd-face (,@fg-violet ,@bg-base03))
                 (org-waiting-kwd-face (,@fg-orange ,@bg-base03))
                 (org-someday-kwd-face (,@fg-blue ,@bg-base03))
