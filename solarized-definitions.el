@@ -749,6 +749,19 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (company-preview (,@bg-green))
                 (company-preview-common (,@bg-base02))
                 (company-template-field (,@fg-base03 ,@bg-yellow))
+                ;; ivy
+                (ivy-action (,@fg-magenta))
+                (ivy-confirm-face (,@fg-green))
+                (ivy-current-match (,@fg-green :inherit highlight))
+                (ivy-match-required-face (,@fg-red))
+                (ivy-remote (,@fg-orange))
+                (ivy-subdir (:inherit ido-subdir))
+                (ivy-virtual (:inherit ido-virtual))
+                (ivy-minibuffer-match-face-1 (,@fg-cyan))
+                (ivy-minibuffer-match-face-2 (,@fg-yellow))
+                (ivy-minibuffer-match-face-3 (,@fg-blue))
+                (ivy-minibuffer-match-face-4 (,@fg-orange))
+
                 ;; hydra
                 (hydra-face-red (,@fmt-bold ,@fg-red))
                 (hydra-face-blue (,@fmt-bold ,@fg-blue))
