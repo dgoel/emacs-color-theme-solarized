@@ -234,7 +234,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (link (,@fmt-undr ,@fg-violet))    ; Underlined
                 (link-visited (,@fmt-undr ,@fg-magenta))
                 (match (,@fmt-revr ,@fg-yellow ,@bg-back))   ; Search
-                (error (,@fmt-revr ,@fg-red))      ; ErrorMsg
+                (error (,@fmt-none ,@fg-red))      ; ErrorMsg
                 (warning (,@fmt-none ,@fg-red))    ; WarningMsg
                 (success (,@fg-blue))              ; MoreMsg
                 (escape-glyph-face (,@fg-red))
@@ -332,7 +332,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (eshell-prompt (,@fmt-bold ,@fg-green))
                 ;; font-lock
                 (font-lock-builtin-face (,@fmt-none ,@fg-magenta)) ; Statement
-                (font-lock-comment-face (,@fmt-ital ,@fg-base01)) ; Comment
+                (font-lock-comment-face (,@fmt-none ,@fg-base01)) ; Comment
                 (font-lock-constant-face (,@fmt-none ,@fg-cyan)) ; Constant
                 (font-lock-function-name-face ; Identifier
                  (,@fmt-none ,@fg-blue))
@@ -342,16 +342,16 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (font-lock-variable-name-face ; Identifier
                  (,@fmt-none ,@fg-blue))
                 (font-lock-warning-face (,@fmt-none ,@fg-red)) ; Error
-                (font-lock-doc-face (,@fmt-ital ,@fg-base01)) ; Comment
+                (font-lock-doc-face (,@fmt-none ,@fg-base01)) ; Comment
                 (font-lock-doc-string-face ; Comment (XEmacs-only)
-                 (,@fmt-ital ,@fg-base01))
+                 (,@fmt-none ,@fg-base01))
                 (font-lock-color-constant-face (,@fmt-none ,@fg-green))
                 (font-lock-comment-delimiter-face ; Comment
-                 (,@fmt-ital ,@fg-base01))
+                 (,@fmt-none ,@fg-base01))
                 (font-lock-preprocessor-face (,@fmt-none ,@fg-orange)) ; PreProc
                 (font-lock-reference-face (,@fmt-none ,@fg-cyan))
                 (font-lock-negation-char-face (,@fmt-none ,@fg-red))
-                (font-lock-other-type-face (,@fmt-ital ,@fg-blue))
+                (font-lock-other-type-face (,@fmt-none ,@fg-blue))
                 (font-lock-regexp-grouping-construct (,@fmt-none ,@fg-orange))
                 (font-lock-special-keyword-face (,@fmt-none ,@fg-red)) ; Special
                 (font-lock-exit-face (,@fmt-none ,@fg-red))
@@ -382,7 +382,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (org-level-6 (:inherit outline-6))
                 (org-level-7 (:inherit outline-7))
                 (org-level-8 (:inherit outline-8))
-                (org-special-keyword (,@fmt-ital ,@fg-base01))
+                (org-special-keyword (,@fmt-none ,@fg-base01))
                 (org-drawer (,@fmt-bold ,@fg-blue))
                 (org-column (,@fmt-revr ,@fg-cyan))
                 (org-column-title (,@fmt-bold ,@fmt-revr))
@@ -399,7 +399,7 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (org-list-dt (,@fmt-bold))
                 (org-agenda-done (,@fg-green))
                 (org-headline-done (,@fg-base01))
-                (org-priority (,@fmt-ital ,@fg-base01))
+                (org-priority (,@fmt-none ,@fg-base01))
                 (org-checkbox (,@fmt-bold))
                 (org-table (,@fg-cyan))
                 (org-formula (:weight bold :slant italic ,@fg-red))
